@@ -24,7 +24,7 @@
             padding: 20px;
             border: 1px solid #6d28d9;
             border-radius: 10px;
-            box-shadow: 0 0 15px #6d28d9;
+            box-shadow: 0 0 5px #6d28d9;
             text-align: center
         }
 
