@@ -6,6 +6,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController ;
+use App\Http\Controllers\PenggarisController ;
 
 Route::get('/', function () {
     return view('welcome');
@@ -56,3 +57,12 @@ Route::get('/pegawai/edit/{id}',[PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update',[PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}',[PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari',[PegawaiDBController::class, 'cari']);
+
+//route CRUD penggaris
+Route::get('/penggaris',[PenggarisController::class, 'index']);
+Route::get('/penggaris/tambah',[PenggarisController::class, 'tambah']);
+Route::post('/penggaris/store',[PenggarisController::class, 'store']);
+Route::get('/penggaris/edit/{id}',[PenggarisController::class, 'edit']);
+Route::post('/penggaris/update',[PenggarisController::class, 'update']);
+Route::get('/penggaris/hapus/{id}',[PenggarisController::class, 'hapus']);
+Route::get('/penggaris/cari',[PenggarisController::class, 'cari']);
