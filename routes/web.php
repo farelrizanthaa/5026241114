@@ -7,6 +7,7 @@ use App\Http\Controllers\PegawaiController ;
 use App\Http\Controllers\BlogController ;
 use App\Http\Controllers\PegawaiDBController ;
 use App\Http\Controllers\PenggarisController ;
+use App\Http\Controllers\BelanjaController ;
 
 Route::get('/', function () {
     return view('welcome');
@@ -66,3 +67,11 @@ Route::get('/penggaris/edit/{id}',[PenggarisController::class, 'edit']);
 Route::post('/penggaris/update',[PenggarisController::class, 'update']);
 Route::get('/penggaris/hapus/{id}',[PenggarisController::class, 'hapus']);
 Route::get('/penggaris/cari',[PenggarisController::class, 'cari']);
+
+
+
+//route keranjangbelanja
+Route::get('/keranjangbelanja',[BelanjaController::class, 'index']);
+Route::get('/keranjangbelanja/tambah',[BelanjaController::class, 'tambah']);
+Route::post('/keranjangbelanja/store',[BelanjaController::class, 'store']);
+Route::get('/keranjangbelanja/hapus/{id}',[BelanjaController::class, 'hapus']);
