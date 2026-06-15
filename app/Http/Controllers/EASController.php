@@ -17,6 +17,7 @@ class EASController extends Controller
     public function tambah()
     {
         return view('nilai_peserta.tambah');
+
     }
 
     public function store(Request $request)
